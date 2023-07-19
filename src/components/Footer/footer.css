@@ -1,0 +1,47 @@
+.footer-content {
+  padding-inline: var(--padding-inline);
+  padding-block: 3rem;
+}
+
+.footer-content article h2 {
+  font-size: var(--fs-400);
+  letter-spacing: 4px;
+  margin-block-end: 1rem;
+}
+
+:is(.dark, .light) > img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  max-height: 266px;
+}
+
+@media screen and (min-width: 768px) {
+  .footer {
+    flex-direction: row;
+    align-items: stretch;
+  }
+
+  :is(.dark, .light) {
+    width: 30%;
+  }
+
+  :is(.dark, .light) > img {
+    max-height: 375px;
+  }
+
+  .footer-content {
+    width: 40%;
+  }
+
+  .footer-content article h2{
+    font-size: var(--fs-100);
+  }
+}
+
+@media screen and (min-width: 1440px){
+    .footer-content{
+        padding-block: 4.2rem;
+    }
+}

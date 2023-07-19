@@ -1,0 +1,119 @@
+.main-img-holder {
+  position: relative;
+  max-height: 556px;
+}
+
+.main-img-holder > picture {
+  height: 100%;
+  max-height: 556px;
+  overflow: hidden;
+}
+
+.main-img-holder > picture > img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.buttons {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  background-color: hsl(var(--clr-black));
+  width: 120px;
+  height: 60px;
+}
+
+.buttons > :is(.left, .right) {
+  height: 100%;
+  width: 50%;
+  justify-content: center;
+  padding-block: 1rem;
+  transition: all 0.5s ease-out;
+}
+
+.buttons > :is(.left, .right):active {
+  background-color: hsl(var(--clr-white), 0.25);
+}
+
+.buttons > :is(.left, .right) > svg {
+  transform: scale(0.95);
+}
+
+.main-article {
+  padding-inline: var(--padding-inline);
+  padding-block: 4.5rem;
+}
+
+.main-article article h1 {
+  font-size: var(--fs-600);
+  font-weight: 500;
+  margin-block-end: 1rem;
+}
+
+.main-article article p {
+  margin-block-end: 3rem;
+}
+
+@media screen and (min-width: 375px) {
+  .main-article article h1 {
+    font-size: 2.25rem;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  #main {
+    flex-direction: row;
+    align-items: stretch;
+  }
+
+  .main-img-holder {
+    width: 60%;
+  }
+
+  .main-article {
+    width: 40%;
+  }
+
+  .buttons {
+    width: 145px;
+  }
+
+  .buttons > :is(.left, .right):hover {
+    background-color: hsl(var(--clr-white), 0.25);
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .main-img-holder,
+  .main-img-holder > picture {
+    max-height: 534px;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  #main {
+    align-items: flex-start;
+  }
+
+  .main-article {
+    padding-inline: calc(var(--padding-inline) * 1.65);
+    padding-block: 7rem;
+  }
+
+  .main-article article h1 {
+    font-size: 2.75rem;
+  }
+
+  .buttons {
+    right: -145px;
+  }
+}
+
+@media screen and (min-width: 1536px) {
+  .buttons {
+    width: 153.5px;
+    right: -153.5px;
+  }
+}
