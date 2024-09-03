@@ -82,7 +82,7 @@ const Main = () => {
     useEffect(() => {
         const interval = setInterval(() => {
             setCount((value) => (value + 1) % length);
-        }, 15000);
+        }, 10000);
 
         return () => clearInterval(interval);
     }, []);
